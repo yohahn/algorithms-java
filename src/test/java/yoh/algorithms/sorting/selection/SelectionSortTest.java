@@ -1,26 +1,26 @@
-package yoh.algorithms.sorting.bubble;
+package yoh.algorithms.sorting.selection;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertArrayEquals;
 
 /**
  * @author yohahn.kim
- * @since 7/13/14 8:50 PM
+ * @since 7/13/14 9:53 PM
  */
-public class BubbleSortTest {
+public class SelectionSortTest {
 
     @Test
     public void sort_NullArray() {
 
-        BubbleSort.sort(null);
+        SelectionSort.sort(null);
     }
 
     @Test
     public void sort_EmptyArray() {
 
         int[] fixture = {};
-        BubbleSort.sort(fixture);
+        SelectionSort.sort(fixture);
     }
 
 
@@ -28,7 +28,7 @@ public class BubbleSortTest {
     public void sort_One() {
 
         int[] actual = { 3 };
-        BubbleSort.sort(actual);
+        SelectionSort.sort(actual);
 
         int[] expected = { 3 };
         assertArrayEquals(expected, actual);
@@ -38,7 +38,7 @@ public class BubbleSortTest {
     public void sort_Two() {
 
         int[] actual = { 10, 3 };
-        BubbleSort.sort(actual);
+        SelectionSort.sort(actual);
 
         int[] expected = { 3, 10 };
         assertArrayEquals(expected, actual);
@@ -48,7 +48,7 @@ public class BubbleSortTest {
     public void sort_Unique() {
 
         int[] actual = { 10, 1, 8, 2, 6, 9, 4, 3, 7, 5 };
-        BubbleSort.sort(actual);
+        SelectionSort.sort(actual);
 
         int[] expected = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
         assertArrayEquals(expected, actual);
@@ -59,7 +59,7 @@ public class BubbleSortTest {
 
 
         int[] actual = { 10, 1, 8, 2, 6, 10, 4, 3, 8, 5 };
-        BubbleSort.sort(actual);
+        SelectionSort.sort(actual);
 
         int[] expected = { 1, 2, 3, 4, 5, 6, 8, 8, 10, 10 };
         assertArrayEquals(expected, actual);

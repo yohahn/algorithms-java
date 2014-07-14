@@ -1,5 +1,7 @@
 package yoh.algorithms.sorting.bubble;
 
+import static yoh.algorithms.sorting.SortUtils.*;
+
 /**
  * @author yohahn.kim
  * @since 7/13/14 8:31 PM
@@ -32,9 +34,4 @@ public class BubbleSort {
         }
     }
 
-    private static void swap(int[] array, int leftIdx, int rightIdx) {
-        int temp = array[leftIdx];
-        array[leftIdx] = array[rightIdx];
-        array[rightIdx] = temp;
-    }
 }
